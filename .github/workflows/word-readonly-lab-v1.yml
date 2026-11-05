@@ -1,0 +1,33 @@
+name: Word read-only popup lab V1.0
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/word-readonly-lab-v1.yml'
+      - 'word-popup-lab/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  windows-environment-probe:
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: windows-2022
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Verify Word and interactive desktop prerequisites
+        shell: powershell
+        run: ./word-popup-lab/v1.0/probe_v1_0.ps1 -OutputDirectory ./lab-results
+      - name: Preserve environment evidence even when prerequisites fail
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: word-readonly-popup-environment-v1
+          path: lab-results/
+          if-no-files-found: error
+          retention-days: 7
