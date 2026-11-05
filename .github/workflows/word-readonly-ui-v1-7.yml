@@ -1,10 +1,6 @@
 name: Word actual registry and reading view V1.7
 on:
-  pull_request:
-    branches: [main]
-    paths:
-      - '.github/workflows/word-readonly-ui-v1-7.yml'
-      - 'word-popup-lab/v1.7/**'
+  workflow_dispatch:
 permissions:
   contents: read
 jobs:
