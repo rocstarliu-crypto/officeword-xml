@@ -1,0 +1,37 @@
+name: Word real selection and startup handling V1.2
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+jobs:
+  real-word-selection:
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: windows-2022
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        office: ['Current', '16.0.20228.20276']
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Install official Word in disposable environment
+        shell: powershell
+        env:
+          WORD_LAB_OFFICE_VERSION: ${{ matrix.office }}
+        run: ./word-popup-lab/v1.2/install_word_v1_2.ps1 -OutputDirectory ./lab-results -OfficeVersion $env:WORD_LAB_OFFICE_VERSION
+      - name: Install UI automation
+        run: python -m pip install pywinauto==0.6.9 pywin32 Pillow
+      - name: Handle privacy introduction and attempt actual text selection
+        shell: powershell
+        run: python ./word-popup-lab/v1.2/reproduce_v1_2.py ./lab-results
+      - name: Preserve synthetic UI and observed feature identifiers
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: word-real-selection-v1-2-${{ matrix.office }}
+          path: lab-results/
+          retention-days: 7
+          if-no-files-found: warn

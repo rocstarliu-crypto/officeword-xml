@@ -1,0 +1,119 @@
+{
+  "version": "3.0",
+  "baseline": {
+    "writable": {
+      "scenario": "baseline-writable",
+      "fileReadonly": false,
+      "selectedSyntheticTextConfirmed": true,
+      "dialogBeforeSelection": false,
+      "dialogAfterSelection": false,
+      "result": "INCONCLUSIVE_NO_MATCHING_AUTHENTICATED_PROFILE",
+      "onboarding": {
+        "ready": true,
+        "actions": [
+          {
+            "button": "下一步"
+          },
+          {
+            "button": "不发送可选数据"
+          },
+          {
+            "button": "完成"
+          }
+        ],
+        "blockers": []
+      },
+      "fixtureKind": "plain",
+      "fileReadonlyObserved": false,
+      "inputMethod": "keyboard",
+      "selectionStart": 0,
+      "selectionLength": 12,
+      "explainEntryObserved": false,
+      "copiedSyntheticSample": "WORDLAB_SYNT"
+    },
+    "readonly": {
+      "scenario": "baseline-readonly",
+      "fileReadonly": true,
+      "selectedSyntheticTextConfirmed": false,
+      "dialogBeforeSelection": false,
+      "dialogAfterSelection": true,
+      "result": "TARGET_DIALOG_OBSERVED_AFTER_SELECTION",
+      "onboarding": {
+        "ready": true,
+        "actions": [],
+        "blockers": []
+      },
+      "fixtureKind": "plain",
+      "comHandleMatches": true,
+      "comOptions": {},
+      "documentReadOnlyCOM": true,
+      "viewTypeBeforeCOM": 3,
+      "openAttachmentsBeforeCOM": false,
+      "fileReadonlyObserved": true,
+      "documentReadOnlyAfterChanges": true,
+      "sameDocumentPath": true,
+      "viewTypeAtSelection": 3,
+      "documentProtectionType": -1,
+      "inputMethod": "keyboard",
+      "selectionStart": 0,
+      "selectionLength": 12,
+      "explainEntryObserved": false
+    }
+  },
+  "trials": [
+    {
+      "scenario": "native-menu-readonly",
+      "requestedMenu": "readonly",
+      "method": "keyboard",
+      "selectedSyntheticTextConfirmed": false,
+      "dialogAfterSelection": false,
+      "startupWritableCopy": true,
+      "result": "BLOCKED_AUTOMATION",
+      "error": "RuntimeError: Classic Open dialog was not found"
+    },
+    {
+      "scenario": "native-menu-protected-keyboard",
+      "requestedMenu": "protected",
+      "method": "keyboard",
+      "selectedSyntheticTextConfirmed": false,
+      "dialogAfterSelection": false,
+      "startupWritableCopy": true,
+      "result": "BLOCKED_AUTOMATION",
+      "error": "RuntimeError: Classic Open dialog was not found"
+    },
+    {
+      "scenario": "native-menu-protected-mouse",
+      "requestedMenu": "protected",
+      "method": "mouse",
+      "selectedSyntheticTextConfirmed": false,
+      "dialogAfterSelection": false,
+      "startupWritableCopy": true,
+      "result": "BLOCKED_AUTOMATION",
+      "error": "RuntimeError: Classic Open dialog was not found"
+    },
+    {
+      "scenario": "native-menu-protected-structure",
+      "requestedMenu": "protected",
+      "method": "mouse",
+      "selectedSyntheticTextConfirmed": false,
+      "dialogAfterSelection": false,
+      "startupWritableCopy": true,
+      "result": "BLOCKED_AUTOMATION",
+      "error": "RuntimeError: Classic Open dialog was not found"
+    },
+    {
+      "scenario": "native-menu-protected-chinese",
+      "requestedMenu": "protected",
+      "method": "mouse",
+      "selectedSyntheticTextConfirmed": false,
+      "dialogAfterSelection": false,
+      "startupWritableCopy": true,
+      "result": "BLOCKED_AUTOMATION",
+      "error": "RuntimeError: Classic Open dialog was not found"
+    }
+  ],
+  "privacyUnchangedAndDisabled": true,
+  "verifiedNativeProtectedMenu": false,
+  "verifiedNativeReadonlyMenu": false,
+  "rootCauseFixed": false
+}

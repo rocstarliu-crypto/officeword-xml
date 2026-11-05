@@ -1,0 +1,283 @@
+{
+  "version": "2.0",
+  "baseline": {
+    "plainWritable": {
+      "scenario": "plain-writable",
+      "fileReadonly": false,
+      "selectedSyntheticTextConfirmed": true,
+      "dialogBeforeSelection": false,
+      "dialogAfterSelection": false,
+      "result": "INCONCLUSIVE_NO_MATCHING_AUTHENTICATED_PROFILE",
+      "onboarding": {
+        "ready": true,
+        "actions": [
+          {
+            "button": "下一步"
+          },
+          {
+            "button": "不发送可选数据"
+          },
+          {
+            "button": "完成"
+          }
+        ],
+        "blockers": []
+      },
+      "fixtureKind": "plain",
+      "fileReadonlyObserved": false,
+      "inputMethod": "keyboard",
+      "explainEntryObserved": false,
+      "copiedSyntheticSample": "WORDLAB_SYNT"
+    },
+    "plainReadonly": {
+      "scenario": "plain-readonly",
+      "fileReadonly": true,
+      "selectedSyntheticTextConfirmed": false,
+      "dialogBeforeSelection": false,
+      "dialogAfterSelection": true,
+      "result": "TARGET_DIALOG_OBSERVED_AFTER_SELECTION",
+      "onboarding": {
+        "ready": true,
+        "actions": [],
+        "blockers": []
+      },
+      "fixtureKind": "plain",
+      "comHandleMatches": true,
+      "comOptions": {},
+      "documentReadOnlyCOM": true,
+      "viewTypeBeforeCOM": 3,
+      "openAttachmentsBeforeCOM": false,
+      "fileReadonlyObserved": true,
+      "documentReadOnlyAfterChanges": true,
+      "sameDocumentPath": true,
+      "viewTypeAtSelection": 3,
+      "documentProtectionType": -1,
+      "inputMethod": "keyboard",
+      "explainEntryObserved": false
+    },
+    "structuredReadonly": {
+      "scenario": "structured-readonly",
+      "fileReadonly": true,
+      "selectedSyntheticTextConfirmed": false,
+      "dialogBeforeSelection": false,
+      "dialogAfterSelection": true,
+      "result": "TARGET_DIALOG_OBSERVED_AFTER_SELECTION",
+      "onboarding": {
+        "ready": true,
+        "actions": [],
+        "blockers": []
+      },
+      "fixtureKind": "structured",
+      "comHandleMatches": true,
+      "comOptions": {},
+      "documentReadOnlyCOM": true,
+      "viewTypeBeforeCOM": 3,
+      "openAttachmentsBeforeCOM": false,
+      "fileReadonlyObserved": true,
+      "documentReadOnlyAfterChanges": true,
+      "sameDocumentPath": true,
+      "viewTypeAtSelection": 3,
+      "documentProtectionType": -1,
+      "inputMethod": "keyboard",
+      "explainEntryObserved": false
+    }
+  },
+  "trials": [
+    {
+      "candidate": "document-mode-editing",
+      "diagnosticOnly": false,
+      "verified": false,
+      "B": {
+        "scenario": "document-mode-editing-B",
+        "fileReadonly": true,
+        "selectedSyntheticTextConfirmed": false,
+        "dialogBeforeSelection": false,
+        "dialogAfterSelection": true,
+        "result": "TARGET_DIALOG_OBSERVED_AFTER_SELECTION",
+        "onboarding": {
+          "ready": true,
+          "actions": [],
+          "blockers": []
+        },
+        "fixtureKind": "plain",
+        "documentModeChange": {
+          "applied": true,
+          "before": "查看",
+          "requested": "编辑",
+          "selectedMenuItem": "编辑"
+        },
+        "comHandleMatches": true,
+        "comOptions": {},
+        "documentReadOnlyCOM": true,
+        "viewTypeBeforeCOM": 3,
+        "openAttachmentsBeforeCOM": false,
+        "fileReadonlyObserved": true,
+        "documentReadOnlyAfterChanges": true,
+        "sameDocumentPath": true,
+        "viewTypeAtSelection": 3,
+        "documentProtectionType": -1,
+        "inputMethod": "keyboard",
+        "explainEntryObserved": false
+      }
+    },
+    {
+      "candidate": "live-preview-off",
+      "diagnosticOnly": false,
+      "verified": false,
+      "B": {
+        "scenario": "live-preview-off-B",
+        "fileReadonly": true,
+        "selectedSyntheticTextConfirmed": false,
+        "dialogBeforeSelection": false,
+        "dialogAfterSelection": true,
+        "result": "TARGET_DIALOG_OBSERVED_AFTER_SELECTION",
+        "onboarding": {
+          "ready": true,
+          "actions": [],
+          "blockers": []
+        },
+        "fixtureKind": "plain",
+        "comHandleMatches": true,
+        "comOptions": {
+          "EnableLivePreview": {
+            "before": true,
+            "after": false
+          }
+        },
+        "documentReadOnlyCOM": true,
+        "viewTypeBeforeCOM": 3,
+        "openAttachmentsBeforeCOM": false,
+        "fileReadonlyObserved": true,
+        "documentReadOnlyAfterChanges": true,
+        "sameDocumentPath": true,
+        "viewTypeAtSelection": 3,
+        "documentProtectionType": -1,
+        "inputMethod": "keyboard",
+        "explainEntryObserved": false,
+        "comOptionsRestored": true
+      }
+    },
+    {
+      "candidate": "screen-tips-off",
+      "diagnosticOnly": false,
+      "verified": false,
+      "B": {
+        "scenario": "screen-tips-off-B",
+        "fileReadonly": true,
+        "selectedSyntheticTextConfirmed": false,
+        "dialogBeforeSelection": false,
+        "dialogAfterSelection": true,
+        "result": "TARGET_DIALOG_OBSERVED_AFTER_SELECTION",
+        "onboarding": {
+          "ready": true,
+          "actions": [],
+          "blockers": []
+        },
+        "fixtureKind": "plain",
+        "comHandleMatches": true,
+        "comOptions": {},
+        "documentReadOnlyCOM": true,
+        "viewTypeBeforeCOM": 3,
+        "openAttachmentsBeforeCOM": false,
+        "appOptions": {
+          "DisplayScreenTips": {
+            "before": true,
+            "after": false
+          }
+        },
+        "fileReadonlyObserved": true,
+        "documentReadOnlyAfterChanges": true,
+        "sameDocumentPath": true,
+        "viewTypeAtSelection": 3,
+        "documentProtectionType": -1,
+        "inputMethod": "keyboard",
+        "explainEntryObserved": false,
+        "wordQuitGracefully": true
+      }
+    },
+    {
+      "candidate": "alerts-none-diagnostic",
+      "diagnosticOnly": true,
+      "verified": false,
+      "B": {
+        "scenario": "alerts-none-diagnostic-B",
+        "fileReadonly": true,
+        "selectedSyntheticTextConfirmed": false,
+        "dialogBeforeSelection": false,
+        "dialogAfterSelection": true,
+        "result": "TARGET_DIALOG_OBSERVED_AFTER_SELECTION",
+        "onboarding": {
+          "ready": true,
+          "actions": [],
+          "blockers": []
+        },
+        "fixtureKind": "plain",
+        "comHandleMatches": true,
+        "comOptions": {},
+        "documentReadOnlyCOM": true,
+        "viewTypeBeforeCOM": 3,
+        "openAttachmentsBeforeCOM": false,
+        "appOptions": {
+          "DisplayAlerts": {
+            "before": -2,
+            "after": 0
+          }
+        },
+        "fileReadonlyObserved": true,
+        "documentReadOnlyAfterChanges": true,
+        "sameDocumentPath": true,
+        "viewTypeAtSelection": 3,
+        "documentProtectionType": -1,
+        "inputMethod": "keyboard",
+        "explainEntryObserved": false,
+        "wordQuitGracefully": true
+      }
+    },
+    {
+      "candidate": "alternate-observed-gate-namespaces",
+      "values": {
+        "Microsoft.Office.UCI.PersistentSelectionFloatie": "false",
+        "Microsoft.Office.UCI.PersistentSelectionFloatieForAllUsers": "false",
+        "Microsoft.Office.UCI.DABConsumptionSuaOnReadOnlySelection": "false",
+        "Microsoft.Office.UCI.ExplainWithCopilotOnRamps": "false",
+        "Microsoft.Office.UXPlatform.PersistentSelectionFloatie": "false",
+        "Microsoft.Office.UXPlatform.PersistentSelectionFloatieForAllUsers": "false",
+        "Microsoft.Office.UXPlatform.DABConsumptionSuaOnReadOnlySelection": "false",
+        "Microsoft.Office.UXPlatform.ExplainWithCopilotOnRamps": "false",
+        "Microsoft.Office.Shared.PersistentSelectionFloatie": "false",
+        "Microsoft.Office.Shared.PersistentSelectionFloatieForAllUsers": "false",
+        "Microsoft.Office.Shared.DABConsumptionSuaOnReadOnlySelection": "false",
+        "Microsoft.Office.Shared.ExplainWithCopilotOnRamps": "false"
+      },
+      "verified": false,
+      "B": {
+        "scenario": "namespace-group-B",
+        "fileReadonly": true,
+        "selectedSyntheticTextConfirmed": false,
+        "dialogBeforeSelection": false,
+        "dialogAfterSelection": true,
+        "result": "TARGET_DIALOG_OBSERVED_AFTER_SELECTION",
+        "onboarding": {
+          "ready": true,
+          "actions": [],
+          "blockers": []
+        },
+        "fixtureKind": "plain",
+        "comHandleMatches": true,
+        "comOptions": {},
+        "documentReadOnlyCOM": true,
+        "viewTypeBeforeCOM": 3,
+        "openAttachmentsBeforeCOM": false,
+        "fileReadonlyObserved": true,
+        "documentReadOnlyAfterChanges": true,
+        "sameDocumentPath": true,
+        "viewTypeAtSelection": 3,
+        "documentProtectionType": -1,
+        "inputMethod": "keyboard",
+        "explainEntryObserved": false
+      }
+    }
+  ],
+  "verifiedPageViewMethod": null,
+  "privacyUnchangedAndDisabled": true
+}

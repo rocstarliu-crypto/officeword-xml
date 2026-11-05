@@ -1,0 +1,20 @@
+﻿Word 只读打开工具 V1.1
+
+用途：把已经设置“只读”的原 Word 文件，通过明确的只读打开路径，放入普通页面视图。工具不把文件改为可写，不改隐私或 OneDrive 设置。
+
+使用：
+1. 完整解压本文件夹，两个程序文件放在一起。
+2. 先关闭需要打开的那份 Word 文档。
+3. 把已设置只读的 Word 文档拖到 Open_Word_Readonly_V1_1.cmd 上。
+   也可双击该 CMD，按回车，然后选择文档。
+4. 在新打开的 Word 窗口中正常选字、复制。工具退出后 Word 保持打开。
+
+程序菜单：0查看流程；1选文件打开；2查看日志；9退出。
+日志仅保存在本机：%LOCALAPPDATA%\EIAWordReadonlyOpen\V1_1\logs
+
+这是打开路径的绕开方法，没有给 Word 程序打补丁。以后直接双击原文档，仍可能触发原弹窗。
+源文件属性必须已经为只读。本工具不改变只读属性，不另存或转换文档；首次原生打开遵循 Word 原有宏安全设置，只读再打开阶段临时禁止自动宏。不安装服务、启动项或计划任务，不需要 Python 或管理员权限。
+
+如需撤回：关闭通过工具打开的 Word，删除本工具文件夹即可；本机日志可自行删除。
+验证记录：
+https://github.com/rocstarliu-crypto/officeword-xml/blob/codex/word-readonly-lab-v1/word-popup-lab/RESULTS_V1.1.md

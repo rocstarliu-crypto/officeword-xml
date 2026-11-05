@@ -1,0 +1,46 @@
+{
+  "checked_at": "2026-11-05T03:24:08.2430209+00:00",
+  "window_minutes": 62,
+  "maximum": 10,
+  "workflow_runs": 6,
+  "jobs": 6,
+  "runs": [
+    {
+      "id": 41961333547,
+      "created_at": "2026-11-05T03:23:53Z",
+      "jobs": 1,
+      "attempt": 1
+    },
+    {
+      "id": 41959811288,
+      "created_at": "2026-11-05T03:09:33Z",
+      "jobs": 1,
+      "attempt": 1
+    },
+    {
+      "id": 41957817819,
+      "created_at": "2026-11-05T02:50:49Z",
+      "jobs": 1,
+      "attempt": 1
+    },
+    {
+      "id": 41956499527,
+      "created_at": "2026-11-05T02:38:11Z",
+      "jobs": 1,
+      "attempt": 1
+    },
+    {
+      "id": 41955979680,
+      "created_at": "2026-11-05T02:33:22Z",
+      "jobs": 1,
+      "attempt": 1
+    },
+    {
+      "id": 41955029526,
+      "created_at": "2026-11-05T02:24:48Z",
+      "jobs": 1,
+      "attempt": 1
+    }
+  ],
+  "allowed": true
+}

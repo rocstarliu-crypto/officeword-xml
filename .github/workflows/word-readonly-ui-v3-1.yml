@@ -1,0 +1,41 @@
+name: Word actual native readonly and Protected View menus V3.1
+on:
+  workflow_dispatch:
+concurrency:
+  group: word-popup-lab
+  cancel-in-progress: false
+permissions:
+  contents: read
+  actions: read
+jobs:
+  protected-view:
+    if: github.event.label.name == 'wordlab-run-v3-1' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: windows-2022
+    timeout-minutes: 25
+    env:
+      PYTHONIOENCODING: utf-8
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Enforce rolling hourly Actions budget
+        shell: powershell
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: ./word-popup-lab/action-rate-limit-v1.ps1 -OutputDirectory ./lab-results
+      - name: Install official Word
+        shell: powershell
+        run: ./word-popup-lab/v3.1/install_word_v3_1.ps1 -OutputDirectory ./lab-results
+      - name: Install UI automation
+        run: python -m pip install pywinauto==0.6.9 pywin32 Pillow
+      - name: Verify actual native Open menu and clipboard
+        shell: powershell
+        run: python ./word-popup-lab/v3.1/native_open_ui_v3_1.py ./lab-results
+      - name: Preserve synthetic evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: word-native-open-menu-v3-1
+          path: lab-results/
+          retention-days: 7
+          if-no-files-found: warn

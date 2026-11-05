@@ -1,0 +1,297 @@
+{
+  "version": "1.9",
+  "viewFallback": {
+    "verified": true,
+    "B": {
+      "scenario": "reading-mouse-max-B",
+      "fileReadonly": true,
+      "selectedSyntheticTextConfirmed": true,
+      "dialogBeforeSelection": false,
+      "dialogAfterSelection": false,
+      "result": "INCONCLUSIVE_NO_MATCHING_AUTHENTICATED_PROFILE",
+      "onboarding": {
+        "ready": true,
+        "actions": [],
+        "blockers": []
+      },
+      "requestedView": "阅读视图",
+      "comHandleMatches": true,
+      "comOptions": {},
+      "documentReadOnlyCOM": true,
+      "viewTypeBeforeCOM": 7,
+      "openAttachmentsBeforeCOM": false,
+      "fileReadonlyObserved": true,
+      "inputMethod": "mouse",
+      "selectionGeometrySource": "UIA text range",
+      "selectionRect": [
+        89,
+        103,
+        152,
+        29
+      ],
+      "explainEntryObserved": false,
+      "copiedSyntheticSample": "WORDLAB_SYNT"
+    },
+    "B2": {
+      "scenario": "reading-mouse-max-B2",
+      "fileReadonly": true,
+      "selectedSyntheticTextConfirmed": true,
+      "dialogBeforeSelection": false,
+      "dialogAfterSelection": false,
+      "result": "INCONCLUSIVE_NO_MATCHING_AUTHENTICATED_PROFILE",
+      "onboarding": {
+        "ready": true,
+        "actions": [],
+        "blockers": []
+      },
+      "requestedView": "阅读视图",
+      "comHandleMatches": true,
+      "comOptions": {},
+      "documentReadOnlyCOM": true,
+      "viewTypeBeforeCOM": 7,
+      "openAttachmentsBeforeCOM": false,
+      "fileReadonlyObserved": true,
+      "inputMethod": "mouse",
+      "selectionGeometrySource": "UIA text range",
+      "selectionRect": [
+        89,
+        103,
+        152,
+        29
+      ],
+      "explainEntryObserved": false,
+      "copiedSyntheticSample": "WORDLAB_SYNT"
+    },
+    "A2": {
+      "scenario": "print-mouse-max-A2",
+      "fileReadonly": true,
+      "selectedSyntheticTextConfirmed": false,
+      "dialogBeforeSelection": false,
+      "dialogAfterSelection": true,
+      "result": "TARGET_DIALOG_OBSERVED_AFTER_SELECTION",
+      "onboarding": {
+        "ready": true,
+        "actions": [],
+        "blockers": []
+      },
+      "requestedView": "页面视图",
+      "comHandleMatches": true,
+      "comOptions": {},
+      "documentReadOnlyCOM": true,
+      "viewTypeBeforeCOM": 3,
+      "openAttachmentsBeforeCOM": false,
+      "fileReadonlyObserved": true,
+      "inputMethod": "mouse",
+      "selectionGeometrySource": "UIA text range",
+      "selectionRect": [
+        203,
+        324,
+        109,
+        19
+      ],
+      "explainEntryObserved": false
+    }
+  },
+  "baseline": {
+    "writable": {
+      "scenario": "control-writable",
+      "fileReadonly": false,
+      "selectedSyntheticTextConfirmed": true,
+      "dialogBeforeSelection": false,
+      "dialogAfterSelection": false,
+      "result": "INCONCLUSIVE_NO_MATCHING_AUTHENTICATED_PROFILE",
+      "onboarding": {
+        "ready": true,
+        "actions": [
+          {
+            "button": "下一步"
+          },
+          {
+            "button": "不发送可选数据"
+          },
+          {
+            "button": "完成"
+          }
+        ],
+        "blockers": []
+      },
+      "fileReadonlyObserved": false,
+      "inputMethod": "keyboard",
+      "explainEntryObserved": false,
+      "copiedSyntheticSample": "WORDLAB_SYNT"
+    },
+    "readonly": {
+      "scenario": "control-readonly",
+      "fileReadonly": true,
+      "selectedSyntheticTextConfirmed": false,
+      "dialogBeforeSelection": false,
+      "dialogAfterSelection": true,
+      "result": "TARGET_DIALOG_OBSERVED_AFTER_SELECTION",
+      "onboarding": {
+        "ready": true,
+        "actions": [],
+        "blockers": []
+      },
+      "fileReadonlyObserved": true,
+      "inputMethod": "keyboard",
+      "explainEntryObserved": false
+    }
+  },
+  "trials": [
+    {
+      "values": {
+        "Microsoft.Office.UCI.ShowFloatieChangeGate": "false"
+      },
+      "verified": false,
+      "B": {
+        "scenario": "actual-ECS-0-B",
+        "fileReadonly": true,
+        "selectedSyntheticTextConfirmed": false,
+        "dialogBeforeSelection": false,
+        "dialogAfterSelection": true,
+        "result": "TARGET_DIALOG_OBSERVED_AFTER_SELECTION",
+        "onboarding": {
+          "ready": true,
+          "actions": [],
+          "blockers": []
+        },
+        "fileReadonlyObserved": true,
+        "inputMethod": "keyboard",
+        "explainEntryObserved": false
+      },
+      "restored": true
+    },
+    {
+      "values": {
+        "Microsoft.Office.UXPlatform.CopilotDABEnabled": "false",
+        "Microsoft.Office.UXPlatform.CopilotDABConsumerEnabled": "false",
+        "Microsoft.Office.UXPlatform.CopilotDABConsumerProEnabled": "false",
+        "Microsoft.Office.UXPlatform.CopilotDABCommercialProEnabled": "false"
+      },
+      "verified": false,
+      "B": {
+        "scenario": "actual-ECS-1-B",
+        "fileReadonly": true,
+        "selectedSyntheticTextConfirmed": false,
+        "dialogBeforeSelection": false,
+        "dialogAfterSelection": true,
+        "result": "TARGET_DIALOG_OBSERVED_AFTER_SELECTION",
+        "onboarding": {
+          "ready": true,
+          "actions": [],
+          "blockers": []
+        },
+        "fileReadonlyObserved": true,
+        "inputMethod": "keyboard",
+        "explainEntryObserved": false
+      },
+      "restored": true
+    },
+    {
+      "values": {
+        "Microsoft.Office.Word.CoPilot.Chat": "false",
+        "Microsoft.Office.Word.CopilotStart": "false",
+        "Microsoft.Office.Shared.Copilot.EnableM365CopilotForConsumers": "false"
+      },
+      "verified": false,
+      "B": {
+        "scenario": "actual-ECS-2-B",
+        "fileReadonly": true,
+        "selectedSyntheticTextConfirmed": false,
+        "dialogBeforeSelection": false,
+        "dialogAfterSelection": true,
+        "result": "TARGET_DIALOG_OBSERVED_AFTER_SELECTION",
+        "onboarding": {
+          "ready": true,
+          "actions": [],
+          "blockers": []
+        },
+        "fileReadonlyObserved": true,
+        "inputMethod": "keyboard",
+        "explainEntryObserved": false
+      },
+      "restored": true
+    },
+    {
+      "values": {
+        "Microsoft.Office.Word.BlockCopilotChatNoAugloop": "true"
+      },
+      "verified": false,
+      "B": {
+        "scenario": "actual-ECS-3-B",
+        "fileReadonly": true,
+        "selectedSyntheticTextConfirmed": false,
+        "dialogBeforeSelection": false,
+        "dialogAfterSelection": true,
+        "result": "TARGET_DIALOG_OBSERVED_AFTER_SELECTION",
+        "onboarding": {
+          "ready": true,
+          "actions": [],
+          "blockers": []
+        },
+        "fileReadonlyObserved": true,
+        "inputMethod": "keyboard",
+        "explainEntryObserved": false
+      },
+      "restored": true
+    },
+    {
+      "values": {
+        "Microsoft.Office.Word.EnableCopilotDisabledByAdminPolicy": "true"
+      },
+      "verified": false,
+      "B": {
+        "scenario": "actual-ECS-4-B",
+        "fileReadonly": true,
+        "selectedSyntheticTextConfirmed": false,
+        "dialogBeforeSelection": false,
+        "dialogAfterSelection": true,
+        "result": "TARGET_DIALOG_OBSERVED_AFTER_SELECTION",
+        "onboarding": {
+          "ready": true,
+          "actions": [],
+          "blockers": []
+        },
+        "fileReadonlyObserved": true,
+        "inputMethod": "keyboard",
+        "explainEntryObserved": false
+      },
+      "restored": true
+    },
+    {
+      "values": {
+        "Microsoft.Office.UCI.ShowFloatieChangeGate": "false",
+        "Microsoft.Office.UXPlatform.CopilotDABEnabled": "false",
+        "Microsoft.Office.UXPlatform.CopilotDABConsumerEnabled": "false",
+        "Microsoft.Office.UXPlatform.CopilotDABConsumerProEnabled": "false",
+        "Microsoft.Office.UXPlatform.CopilotDABCommercialProEnabled": "false",
+        "Microsoft.Office.Word.CoPilot.Chat": "false",
+        "Microsoft.Office.Word.CopilotStart": "false",
+        "Microsoft.Office.Shared.Copilot.EnableM365CopilotForConsumers": "false",
+        "Microsoft.Office.Word.BlockCopilotChatNoAugloop": "true",
+        "Microsoft.Office.Word.EnableCopilotDisabledByAdminPolicy": "true"
+      },
+      "verified": false,
+      "B": {
+        "scenario": "actual-ECS-5-B",
+        "fileReadonly": true,
+        "selectedSyntheticTextConfirmed": false,
+        "dialogBeforeSelection": false,
+        "dialogAfterSelection": true,
+        "result": "TARGET_DIALOG_OBSERVED_AFTER_SELECTION",
+        "onboarding": {
+          "ready": true,
+          "actions": [],
+          "blockers": []
+        },
+        "fileReadonlyObserved": true,
+        "inputMethod": "keyboard",
+        "explainEntryObserved": false
+      },
+      "restored": true
+    }
+  ],
+  "verifiedValues": null,
+  "fixedInTestEnvironment": false,
+  "privacyUnchangedAndDisabled": true
+}

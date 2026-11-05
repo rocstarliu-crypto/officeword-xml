@@ -1,0 +1,21 @@
+{
+    "version":  "1.1",
+    "time":  "2026-11-05T05:17:17.1524635+00:00",
+    "success":  true,
+    "method":  "Documents.Open(ReadOnly=True)",
+    "file":  "D:\\a\\officeword-xml\\officeword-xml\\lab-results\\synthetic-launcher-keyboard-B.docx",
+    "fileReadonlyBefore":  true,
+    "stage":  "Complete",
+    "nativeProcessId":  2372,
+    "ownedNativeInstanceConfirmed":  true,
+    "documentReadonly":  true,
+    "sameOriginalPath":  true,
+    "fileReadonlyAfter":  true,
+    "viewType":  3,
+    "protectedViewCount":  0,
+    "wordVersion":  "16.0",
+    "wordBuild":  "16.0.20326",
+    "wordProcessId":  2372,
+    "wordWindowHandle":  590208,
+    "logPath":  "C:\\Users\\runneradmin\\AppData\\Local\\EIAWordReadonlyOpen\\V1_1\\logs\\20261105_051720_094.json"
+}

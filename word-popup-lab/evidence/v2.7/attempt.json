@@ -1,0 +1,133 @@
+{
+  "version": "2.7",
+  "baseline": {
+    "writable": {
+      "scenario": "writable",
+      "fileReadonly": false,
+      "selectedSyntheticTextConfirmed": true,
+      "dialogBeforeSelection": false,
+      "dialogAfterSelection": false,
+      "result": "INCONCLUSIVE_NO_MATCHING_AUTHENTICATED_PROFILE",
+      "onboarding": {
+        "ready": true,
+        "actions": [
+          {
+            "button": "下一步"
+          },
+          {
+            "button": "不发送可选数据"
+          },
+          {
+            "button": "完成"
+          }
+        ],
+        "blockers": []
+      },
+      "fixtureKind": "plain",
+      "fileReadonlyObserved": false,
+      "inputMethod": "keyboard",
+      "selectionStart": 0,
+      "selectionLength": 12,
+      "explainEntryObserved": false,
+      "copiedSyntheticSample": "WORDLAB_SYNT"
+    },
+    "readonly": {
+      "scenario": "readonly",
+      "fileReadonly": true,
+      "selectedSyntheticTextConfirmed": false,
+      "dialogBeforeSelection": false,
+      "dialogAfterSelection": true,
+      "result": "TARGET_DIALOG_OBSERVED_AFTER_SELECTION",
+      "onboarding": {
+        "ready": true,
+        "actions": [],
+        "blockers": []
+      },
+      "fixtureKind": "plain",
+      "comHandleMatches": true,
+      "comOptions": {},
+      "documentReadOnlyCOM": true,
+      "viewTypeBeforeCOM": 3,
+      "openAttachmentsBeforeCOM": false,
+      "fileReadonlyObserved": true,
+      "documentReadOnlyAfterChanges": true,
+      "sameDocumentPath": true,
+      "viewTypeAtSelection": 3,
+      "documentProtectionType": -1,
+      "inputMethod": "keyboard",
+      "selectionStart": 0,
+      "selectionLength": 12,
+      "explainEntryObserved": false
+    }
+  },
+  "trials": [
+    {
+      "scenario": "launcher-keyboard-B",
+      "method": "keyboard",
+      "selectedSyntheticTextConfirmed": false,
+      "dialogAfterSelection": false,
+      "launcherSuccess": true,
+      "launcherExitCode": 0,
+      "launcherExitedBeforeSelection": true,
+      "launcherMetadata": {
+        "version": "1.1",
+        "time": "2026-11-05T05:17:17.1524635+00:00",
+        "success": true,
+        "method": "Documents.Open(ReadOnly=True)",
+        "file": "D:\\a\\officeword-xml\\officeword-xml\\lab-results\\synthetic-launcher-keyboard-B.docx",
+        "fileReadonlyBefore": true,
+        "stage": "Complete",
+        "nativeProcessId": 2372,
+        "ownedNativeInstanceConfirmed": true,
+        "documentReadonly": true,
+        "sameOriginalPath": true,
+        "fileReadonlyAfter": true,
+        "viewType": 3,
+        "protectedViewCount": 0,
+        "wordVersion": "16.0",
+        "wordBuild": "16.0.20326",
+        "wordProcessId": 2372,
+        "wordWindowHandle": 590208,
+        "logPath": "C:\\Users\\runneradmin\\AppData\\Local\\EIAWordReadonlyOpen\\V1_1\\logs\\20261105_051720_094.json"
+      },
+      "protectedViewCount": 0,
+      "fileReadonlyObserved": true,
+      "documentReadOnly": true,
+      "documentFullNameMatches": true,
+      "viewType": 3,
+      "result": "BLOCKED_AUTOMATION",
+      "error": "RuntimeError: Expected one document window after transition, got 0"
+    }
+  ],
+  "reversal": {
+    "scenario": "normal-launch-A2",
+    "fileReadonly": true,
+    "selectedSyntheticTextConfirmed": false,
+    "dialogBeforeSelection": false,
+    "dialogAfterSelection": true,
+    "result": "TARGET_DIALOG_OBSERVED_AFTER_SELECTION",
+    "onboarding": {
+      "ready": true,
+      "actions": [],
+      "blockers": []
+    },
+    "fixtureKind": "plain",
+    "comHandleMatches": true,
+    "comOptions": {},
+    "documentReadOnlyCOM": true,
+    "viewTypeBeforeCOM": 3,
+    "openAttachmentsBeforeCOM": false,
+    "fileReadonlyObserved": true,
+    "documentReadOnlyAfterChanges": true,
+    "sameDocumentPath": true,
+    "viewTypeAtSelection": 3,
+    "documentProtectionType": -1,
+    "inputMethod": "keyboard",
+    "selectionStart": 0,
+    "selectionLength": 12,
+    "explainEntryObserved": false
+  },
+  "privacyUnchangedAndDisabled": true,
+  "verifiedPortableLauncher": false,
+  "rootCauseFixed": false
+}

@@ -1,0 +1,10 @@
+{
+    "experimentVersion":  "2.9",
+    "source":  "Official Microsoft Office Deployment Tool",
+    "requestedProduct":  "O365HomePremRetail",
+    "installedProduct":  "O365HomePremRetail",
+    "version":  "16.0.20326.20232",
+    "platform":  "x64",
+    "authentication":  "No Microsoft account supplied; activation and matching account are NOT verified",
+    "connectedExperiencePolicy":  "All four policy values set to 2 in disposable runner only"
+}
