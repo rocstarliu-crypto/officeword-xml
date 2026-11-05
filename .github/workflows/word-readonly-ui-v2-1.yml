@@ -1,8 +1,6 @@
 name: Word service-alert trigger controls V2.1
 on:
-  pull_request:
-    types: [labeled]
-    branches: [main]
+  workflow_dispatch:
 concurrency:
   group: word-popup-lab
   cancel-in-progress: false
