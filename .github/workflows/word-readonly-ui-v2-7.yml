@@ -1,8 +1,6 @@
 name: Word portable readonly launcher end to end V2.7
 on:
-  pull_request:
-    types: [labeled]
-    branches: [main]
+  workflow_dispatch:
 concurrency:
   group: word-popup-lab
   cancel-in-progress: false
