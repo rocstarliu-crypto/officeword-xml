@@ -1,0 +1,51 @@
+name: Word actual registry and reading view V1.7
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/word-readonly-ui-v1-7.yml'
+      - 'word-popup-lab/v1.7/**'
+permissions:
+  contents: read
+jobs:
+  trace-and-verify:
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: windows-2022
+    timeout-minutes: 25
+    env:
+      PYTHONIOENCODING: utf-8
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Install official Word
+        shell: powershell
+        run: ./word-popup-lab/v1.7/install_word_v1_7.ps1 -OutputDirectory ./lab-results
+      - name: Install UI automation
+        run: python -m pip install pywinauto==0.6.9 pywin32 Pillow
+      - name: Get Microsoft signed Process Monitor
+        shell: powershell
+        run: ./word-popup-lab/v1.7/install_procmon_v1_7.ps1
+      - name: Reproduce and trace actual configuration reads
+        shell: powershell
+        run: python ./word-popup-lab/v1.7/reproduce_v1_7.py ./lab-results baseline
+      - name: Upload early narrow diagnostic trace
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: word-registry-trace-v1-7
+          path: |
+            lab-results/word-registry-trace.json
+            lab-results/baseline.json
+          retention-days: 7
+      - name: Verify supported options views and candidate combinations
+        shell: powershell
+        run: python ./word-popup-lab/v1.7/reproduce_v1_7.py ./lab-results candidates
+      - name: Preserve synthetic evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: word-candidate-v1-7
+          path: lab-results/
+          retention-days: 7
+          if-no-files-found: warn

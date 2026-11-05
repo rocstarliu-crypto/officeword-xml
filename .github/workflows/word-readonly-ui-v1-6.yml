@@ -1,10 +1,6 @@
 name: Word readonly gate and view trials V1.6
 on:
-  pull_request:
-    branches: [main]
-    paths:
-      - '.github/workflows/word-readonly-ui-v1-6.yml'
-      - 'word-popup-lab/v1.6/**'
+  workflow_dispatch:
 permissions:
   contents: read
 jobs:
