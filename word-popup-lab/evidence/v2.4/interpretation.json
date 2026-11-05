@@ -1,0 +1,12 @@
+{
+  "version": "2.4",
+  "protectedViewSuccessfulTrials": 10,
+  "allSameOriginalPath": true,
+  "allFileAndDocumentReadonly": true,
+  "allPrintView3": true,
+  "allCopiedWithoutTargetPopup": true,
+  "automatedStrictFlagFalseReason": "Strict rule expected popup after COM readonly reopen, but COM open also avoided popup. Thus that step was a second successful opening path rather than a restoration of native open. Historical attempt.json preserved unchanged.",
+  "withinSessionContrastingControl": "ProtectedViewWindow.Edit retained original readonly path and view3 but target popup returned. Native launch baseline also popup positive.",
+  "independentDirectCOMValidation": "V2.5 pending",
+  "rootCauseFixed": false
+}

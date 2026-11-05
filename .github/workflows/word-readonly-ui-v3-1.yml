@@ -1,8 +1,6 @@
 name: Word actual native readonly and Protected View menus V3.1
 on:
-  pull_request:
-    types: [labeled]
-    branches: [main]
+  workflow_dispatch:
 concurrency:
   group: word-popup-lab
   cancel-in-progress: false
