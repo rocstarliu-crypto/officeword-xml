@@ -1,8 +1,6 @@
 name: Word Protected View page layout validation V2.3
 on:
-  pull_request:
-    types: [labeled]
-    branches: [main]
+  workflow_dispatch:
 concurrency:
   group: word-popup-lab
   cancel-in-progress: false
