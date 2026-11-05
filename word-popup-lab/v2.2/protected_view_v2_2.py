@@ -195,14 +195,14 @@ def main() -> int:
                 "readonly": lab.run_scenario(word, True, "readonly")}
     lab.emit(OUT / "baseline.json", baseline)
     trials = [run_protected(word, "protected-mouse-B")]
-    if valid(trials[0]):
+    if trials[0].get("selectedSyntheticTextConfirmed") and not trials[0].get("dialogAfterSelection"):
         trials.extend([
             run_protected(word, "protected-mouse-B2"),
             run_protected(word, "protected-structure-mouse", structured=True),
-            run_protected(word, "protected-chinese-mouse", start=32, length=8),
+            run_protected(word, "protected-chinese-mouse", start=lab.SYNTHETIC.index("这"), length=8),
             run_protected(word, "protected-keyboard", method="keyboard"),
             run_protected(word, "protected-caret-keyboard", method="keyboard", caret=True),
-            run_protected(word, "protected-caret-chinese-keyboard", method="keyboard", caret=True, start=32, length=8),
+            run_protected(word, "protected-caret-chinese-keyboard", method="keyboard", caret=True, start=lab.SYNTHETIC.index("这"), length=8),
         ])
     reversal = run_protected(word, "protected-then-normal-A2", reopen_normal=True)
     unchanged = privacy == lab.privacy_snapshot() and all(v == 2 for v in privacy.values())
