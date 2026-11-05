@@ -1,10 +1,6 @@
 name: Word selection candidate A-B-A V1.4
 on:
-  pull_request:
-    branches: [main]
-    paths:
-      - '.github/workflows/word-readonly-ui-v1-4.yml'
-      - 'word-popup-lab/v1.4/**'
+  workflow_dispatch:
 permissions:
   contents: read
 jobs:
