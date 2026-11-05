@@ -1,8 +1,6 @@
 name: Word true mouse selection and reading options V1.8
 on:
-  pull_request:
-    types: [labeled]
-    branches: [main]
+  workflow_dispatch:
 concurrency:
   group: word-popup-lab
   cancel-in-progress: false
@@ -11,7 +9,7 @@ permissions:
   actions: read
 jobs:
   trace-and-verify:
-    if: github.event.label.name == 'wordlab-run-v1-8' && github.event.pull_request.head.repo.full_name == github.repository
+    if: github.event_name == 'workflow_dispatch'
     runs-on: windows-2022
     timeout-minutes: 25
     env:
